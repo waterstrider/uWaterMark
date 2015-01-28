@@ -9,8 +9,8 @@ class UImageViewer(QWidget):
 
         self.gridLayout = QGridLayout(self)
 
-        self.label = QLabel(self)
-        self.gridLayout.addWidget(self.label, 0, 0, 1, 5)
+        self.imageLabel = QLabel(self)
+        self.gridLayout.addWidget(self.imageLabel, 0, 0, 1, 5)
 
         self.rotateLeftButton = QPushButton(self)
         self.gridLayout.addWidget(self.rotateLeftButton, 1, 0, 1, 1)
