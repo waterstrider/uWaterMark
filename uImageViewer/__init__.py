@@ -4,7 +4,7 @@ from sys import argv
 
 from PySide.QtGui import QApplication
 
-from uImageViewer.uImageViwer import UImageViewer
+from uImageViewer.uImageViewer import UImageViewer
 
 
 if __name__ == "__main__":

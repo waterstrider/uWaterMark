@@ -6,7 +6,6 @@ from PySide.QtGui import *
 class UPushButton(QWidget):
     def __init__(self, parent=None):
         QWidget.__init__(self, parent)
-
         self.gridLayout = QGridLayout(self)
 
         self.pushButton = QPushButton(self)
