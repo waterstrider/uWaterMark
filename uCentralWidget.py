@@ -5,7 +5,8 @@ from PySide.QtGui import *
 from uWatermarksList
 from uImagesList
 from uGenerate
-from
+from uDestination.uDestination import UDestination
+from uImageViewer.uImageViewer import UImageViewer
 
 
 class UCentralWidget(QWidget):
@@ -14,16 +15,16 @@ class UCentralWidget(QWidget):
         self.gridLayout = QGridLayout(self)
         self.gridLayout = QGridLayout(self)
 
-        self.widget_3 = QWidget(self)
-        self.gridLayout.addWidget(self.widget_3, 2, 0, 1, 1)
+        self.uDestination = UDestination(self)
+        self.gridLayout.addWidget(self.uDestination, 2, 0, 1, 1)
 
         self.widget_2 = QWidget(self)
 
         self.gridLayout.addWidget(self.widget_2, 1, 0, 1, 1)
 
         self.tabWidget = QTabWidget(self)
-        self.tab_5 = QWidget()
-        self.tabWidget.addTab(self.tab_5, "Image Preview")
+        self.uImageViewer = UImageViewer()
+        self.tabWidget.addTab(self.uImageViewer, "Image Preview")
         self.tab_6 = QWidget()
         self.tabWidget.addTab(self.tab_6, "Watermarks")
 
