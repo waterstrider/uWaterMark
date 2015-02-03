@@ -11,9 +11,9 @@ class UGenerateWidget(QWidget):
 
         self.gridLayout.addWidget(self.generateButton, 0, 0, 2, 1)
 
-        self.comboBox = QComboBox(self)
+        self.fileExtensionCombo = QComboBox(self)
 
-        self.gridLayout.addWidget(self.comboBox, 1, 1, 1, 1)
+        self.gridLayout.addWidget(self.fileExtensionCombo, 1, 1, 1, 1)
 
         self.browseButton = QPushButton("...", self)
 

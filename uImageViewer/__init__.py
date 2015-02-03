@@ -1,5 +1,3 @@
-from uImageViewer import uImageViewerWidget
-
 __author__ = 'waterstrider.vin'
 
 from sys import argv
