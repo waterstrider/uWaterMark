@@ -4,11 +4,11 @@ from sys import argv
 
 from PySide.QtGui import QApplication
 
-from uPushButton.uPushButtonWidget import UPushButtonWidget
+from uRotate.uRotateWidget import URotateWidget
 
 
 if __name__ == "__main__":
     app = QApplication(argv)
-    uPushButtonWidget = UPushButtonWidget()
-    uPushButtonWidget.show()
+    uRotateWidget = URotateWidget()
+    uRotateWidget.show()
     app.exec_()
