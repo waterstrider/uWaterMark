@@ -17,11 +17,11 @@ class UWatermarksListWidget(QWidget):
 
         self.gridLayout.addWidget(self.scrollArea, 1, 0, 1, 2)
 
-        self.addButton = QPushButton(self)
+        self.addButton = QPushButton("+", self)
 
         self.gridLayout.addWidget(self.addButton, 2, 0, 1, 1)
 
-        self.removeButton = QPushButton(self)
+        self.removeButton = QPushButton("-", self)
 
         self.gridLayout.addWidget(self.removeButton, 2, 1, 1, 1)
 

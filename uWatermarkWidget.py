@@ -5,9 +5,11 @@ from PySide.QtGui import *
 from uCentralWidget import UCentralWidget
 
 
-class UWatermark(QMainWindow):
+class UWatermarkWidget(QMainWindow):
     def __init__(self):
         QMainWindow.__init__(self)
+
+        self.setWindowTitle("UWatermark")
 
         self.actionExit = QAction(self)
         self.centralwidget = UCentralWidget(self)

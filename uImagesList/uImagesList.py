@@ -10,10 +10,10 @@ class UImagesList(QWidget):
     def __init__(self, parent=None):
         QWidget.__init__(self, parent)
         self.gridLayout = QGridLayout(self)
-        self.addButton = UPushButton(self)
+        self.addButton = UPushButton(self, "add", "+")
         self.gridLayout.addWidget(self.addButton, 1, 0, 1, 1)
 
-        self.removeButton = UPushButton(self)
+        self.removeButton = UPushButton(self, "remove", "-")
 
         self.gridLayout.addWidget(self.removeButton, 1, 1, 1, 1)
 

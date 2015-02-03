@@ -12,10 +12,10 @@ class UImageViewerWidget(QWidget):
         self.imageLabel = QLabel(self)
         self.gridLayout.addWidget(self.imageLabel, 0, 0, 1, 5)
 
-        self.rotateLeftButton = QPushButton(self)
+        self.rotateLeftButton = QPushButton("<", self)
         self.gridLayout.addWidget(self.rotateLeftButton, 1, 0, 1, 1)
 
-        self.rotateRightButton = QPushButton(self)
+        self.rotateRightButton = QPushButton(">", self)
         self.gridLayout.addWidget(self.rotateRightButton, 1, 1, 1, 1)
 
         self.cropButton = QPushButton("crop", self)
