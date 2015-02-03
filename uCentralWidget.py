@@ -2,34 +2,33 @@ __author__ = 'waterstrider.vin'
 
 from PySide.QtGui import *
 
-from uWatermarksList
-from uImagesList
-from uGenerate
-from uDestination.uDestinationWidget import UDestination
-from uImageViewer.uImageViewerWidget import UImageViewer
+from uWatermarksList.uWatermarksList import UWatermarksList
+from uImagesList.uImagesList import UImagesList
+from uGenerate.uGenerate import UGenerate
+from uDestination.uDestinationWidget import UDestinationWidget
+from uImageViewer.uImageViewerWidget import UImageViewerWidget
 
 
 class UCentralWidget(QWidget):
     def __init__(self, parent=None):
         QWidget.__init__(self, parent)
         self.gridLayout = QGridLayout(self)
-        self.gridLayout = QGridLayout(self)
 
-        self.uDestination = UDestination(self)
-        self.gridLayout.addWidget(self.uDestination, 2, 0, 1, 1)
+        self.uDestination = UDestinationWidget(self)
+        self.gridLayout.addWidget(self.uDestination, 1, 0, 1, 1)
 
-        self.widget_2 = QWidget(self)
+        self.uGenerate = UGenerate(self)
 
-        self.gridLayout.addWidget(self.widget_2, 1, 0, 1, 1)
+        self.gridLayout.addWidget(self.uGenerate, 2, 0, 1, 1)
 
         self.tabWidget = QTabWidget(self)
-        self.uImageViewer = UImageViewer()
+        self.uImageViewer = UImageViewerWidget()
         self.tabWidget.addTab(self.uImageViewer, "Image Preview")
-        self.tab_6 = QWidget()
-        self.tabWidget.addTab(self.tab_6, "Watermarks")
+        self.uWatermarksList = UWatermarksList()
+        self.tabWidget.addTab(self.uWatermarksList, "Watermarks")
 
         self.gridLayout.addWidget(self.tabWidget, 0, 0, 1, 1)
 
-        self.widget = QWidget(self)
+        self.uImagesList = UImagesList(self)
 
-        self.gridLayout.addWidget(self.widget, 0, 1, 3, 1)
+        self.gridLayout.addWidget(self.uImagesList, 0, 1, 3, 1)

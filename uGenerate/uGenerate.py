@@ -19,6 +19,6 @@ class UGenerate(QWidget):
 
         self.gridLayout.addWidget(self.browseButton, 1, 2, 1, 1)
 
-        self.generateLabel = QLabel(self, "Generate!")
+        self.generateLabel = QLabel("Generate!", self)
 
         self.gridLayout.addWidget(self.generateLabel, 0, 1, 1, 2)
