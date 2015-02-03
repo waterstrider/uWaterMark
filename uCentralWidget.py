@@ -3,7 +3,7 @@ __author__ = 'waterstrider.vin'
 from PySide.QtGui import *
 
 from uWatermarksList
-from uImagesList
+from uImagesList.uImagesList import UImagesList
 from uGenerate
 from uDestination.uDestination import UDestination
 from uImageViewer.uImageViewer import UImageViewer
@@ -16,11 +16,11 @@ class UCentralWidget(QWidget):
         self.gridLayout = QGridLayout(self)
 
         self.uDestination = UDestination(self)
-        self.gridLayout.addWidget(self.uDestination, 2, 0, 1, 1)
+        self.gridLayout.addWidget(self.uDestination, 1, 0, 1, 1)
 
         self.widget_2 = QWidget(self)
 
-        self.gridLayout.addWidget(self.widget_2, 1, 0, 1, 1)
+        self.gridLayout.addWidget(self.widget_2, 2, 0, 1, 1)
 
         self.tabWidget = QTabWidget(self)
         self.uImageViewer = UImageViewer()
@@ -30,6 +30,6 @@ class UCentralWidget(QWidget):
 
         self.gridLayout.addWidget(self.tabWidget, 0, 0, 1, 1)
 
-        self.widget = QWidget(self)
+        self.uImagesList = UImagesList(self)
 
-        self.gridLayout.addWidget(self.widget, 0, 1, 3, 1)
+        self.gridLayout.addWidget(self.uImagesList, 0, 1, 3, 1)
