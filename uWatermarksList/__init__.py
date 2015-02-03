@@ -4,11 +4,11 @@ from sys import argv
 
 from PySide.QtGui import QApplication
 
-from uWatermarksList.uWatermarksList import UWatermarksList
+from uWatermarksList.uWatermarksListWidget import UWatermarksListWidget
 
 
 if __name__ == "__main__":
     app = QApplication(argv)
-    uWatermarksList = UWatermarksList()
-    uWatermarksList.show()
+    uWatermarksList = UWatermarksListWidget()
+    uWatermarksListWidget.show()
     app.exec_()

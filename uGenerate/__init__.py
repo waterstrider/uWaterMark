@@ -4,11 +4,11 @@ from sys import argv
 
 from PySide.QtGui import QApplication
 
-from uGenerate.uGenerate import UGenerate
+from uGenerate.uGenerateWidget import UGenerateWidget
 
 
 if __name__ == "__main__":
     app = QApplication(argv)
-    uGenerate = UGenerate()
-    uGenerate.show()
+    uGenerate = UGenerateWidget()
+    uGenerateWidget.show()
     app.exec_()

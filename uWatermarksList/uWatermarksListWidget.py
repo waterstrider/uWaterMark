@@ -4,7 +4,7 @@ from PySide.QtGui import *
 from PySide.QtCore import Qt
 
 
-class UWatermarksList(QWidget):
+class UWatermarksListWidget(QWidget):
     def __init__(self, parent=None):
         QWidget.__init__(self, parent)
         self.gridLayout = QGridLayout(self)
