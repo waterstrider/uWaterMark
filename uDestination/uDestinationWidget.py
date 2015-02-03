@@ -3,7 +3,7 @@ __author__ = 'waterstrider.vin'
 from PySide.QtGui import *
 
 
-class UDestination(QWidget):
+class UDestinationWidget(QWidget):
     def __init__(self, parent=None):
         QWidget.__init__(self, parent)
 

@@ -5,8 +5,8 @@ from PySide.QtGui import *
 from uWatermarksList
 from uImagesList
 from uGenerate
-from uDestination.uDestination import UDestination
-from uImageViewer.uImageViewer import UImageViewer
+from uDestination.uDestinationWidget import UDestination
+from uImageViewer.uImageViewerWidget import UImageViewer
 
 
 class UCentralWidget(QWidget):
