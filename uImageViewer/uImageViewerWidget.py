@@ -3,7 +3,7 @@ __author__ = 'waterstrider.vin'
 from PySide.QtGui import *
 
 
-class UImageViewer(QWidget):
+class UImageViewerWidget(QWidget):
     def __init__(self, parent=None):
         QWidget.__init__(self, parent)
 

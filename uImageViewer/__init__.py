@@ -4,11 +4,11 @@ from sys import argv
 
 from PySide.QtGui import QApplication
 
-from uImageViewer.uImageViewer import UImageViewer
+from uImageViewer.uImageViewerWidget import UImageViewerWidget
 
 
 if __name__ == "__main__":
     app = QApplication(argv)
-    uImageViewer = UImageViewer()
+    uImageViewer = UImageViewerWidget()
     uImageViewer.show()
     app.exec_()

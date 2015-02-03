@@ -4,11 +4,11 @@ from sys import argv
 
 from PySide.QtGui import QApplication
 
-from uDestination.uDestination import UDestination
+from uDestination.uDestinationWidget import UDestinationWidget
 
 
 if __name__ == "__main__":
     app = QApplication(argv)
-    uDestination = UDestination()
+    uDestination = UDestinationWidget()
     uDestination.show()
     app.exec_()
