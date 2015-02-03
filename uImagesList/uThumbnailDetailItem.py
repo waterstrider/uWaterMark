@@ -14,10 +14,14 @@ class UThumbnailDetailItem(QWidget):
         except:
             return -1                                                   # TODO: add warning
 
+        thumbnailWidth = thumbnailHeight = 150
         self.thumbnailPixmap = QPixmap(filepath)
         self.thumbnailLabel = QLabel("<Thumbnail>")
         self.thumbnailLabel.setStyleSheet("border: 1px solid grey")
-        self.thumbnailLabel.setPixmap(self.thumbnailPixmap.scaled(150, 150, Qt.KeepAspectRatio))
+        self.thumbnailLabel.setPixmap(self.thumbnailPixmap.scaled(thumbnailWidth, thumbnailHeight, Qt.KeepAspectRatio))
+        self.thumbnailLabel.setMinimumSize(thumbnailWidth, thumbnailHeight)
+        self.thumbnailLabel.setMaximumSize(thumbnailWidth, thumbnailHeight)
+        self.thumbnailLabel.setAlignment(Qt.AlignCenter)
 
         filename = filepath[max(filepath.rfind('\\'), filepath.rfind('/')) + 1:]
         width = self.thumbnailPixmap.width()
@@ -36,7 +40,15 @@ class UThumbnailDetailItem(QWidget):
 
 if __name__ == "__main__":
     app = QApplication(argv)
-    uThumbnailDetail = UThumbnailDetailItem("..\\Resources\\Sample Image\\sample01.jpg")
-    uThumbnailDetail.show()
+    mainwidget = QWidget()
+    layout = QVBoxLayout()
+    uThumbnailDetailItem1 = UThumbnailDetailItem("..\\Resources\\Sample Image\\sample01.jpg")
+    uThumbnailDetailItem2 = UThumbnailDetailItem("..\\Resources\\Sample Image\\sample02.jpg")
+    uThumbnailDetailItem3 = UThumbnailDetailItem("..\\Resources\\Sample Image\\sample03.jpg")
+    layout.addWidget(uThumbnailDetailItem1)
+    layout.addWidget(uThumbnailDetailItem2)
+    layout.addWidget(uThumbnailDetailItem3)
+    mainwidget.setLayout(layout)
+    mainwidget.show()
     app.exec_()
 
