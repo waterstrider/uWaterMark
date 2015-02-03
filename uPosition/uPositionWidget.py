@@ -8,93 +8,93 @@ class UPositionWidget(QWidget):
     def __init__(self, parent=None):
         QWidget.__init__(self, parent)
 
-        self.gridLayout = QGridLayout(self)
+        self.positionGridLayout = QGridLayout(self)
         self.frame = QFrame(self)
 
         self.frame.setFrameShape(QFrame.StyledPanel)
         self.frame.setFrameShadow(QFrame.Raised)
-        self.gridLayout_5 = QGridLayout(self.frame)
+        self.frameGridLayout = QGridLayout(self.frame)
 
         self.splitter = QSplitter(self.frame)
 
         self.splitter.setOrientation(Qt.Vertical)
-        self.widget = QWidget(self.splitter)
+        self.modeWidget = QWidget(self.splitter)
 
-        self.gridLayout_2 = QGridLayout(self.widget)
+        self.modeGridLayout = QGridLayout(self.modeWidget)
 
-        self.modeLabel = QLabel("Mode:", self.widget)
+        self.modeLabel = QLabel("Mode:", self.modeWidget)
 
-        self.gridLayout_2.addWidget(self.modeLabel, 0, 0, 1, 1)
+        self.modeGridLayout.addWidget(self.modeLabel, 0, 0, 1, 1)
 
-        self.modeCombo = QComboBox(self.widget)
+        self.modeCombo = QComboBox(self.modeWidget)
 
-        self.gridLayout_2.addWidget(self.modeCombo, 0, 1, 1, 1)
+        self.modeGridLayout.addWidget(self.modeCombo, 0, 1, 1, 1)
 
-        self.splitter.addWidget(self.widget)
-        self.widget_2 = QWidget(self.splitter)
+        self.splitter.addWidget(self.modeWidget)
+        self.borderOffsetWidget = QWidget(self.splitter)
 
-        self.gridLayout_3 = QGridLayout(self.widget_2)
+        self.borderOffsetGridLayout = QGridLayout(self.borderOffsetWidget)
 
-        self.XOffsetSpin = QSpinBox(self.widget_2)
+        self.XOffsetSpin = QSpinBox(self.borderOffsetWidget)
 
-        self.gridLayout_3.addWidget(self.XOffsetSpin, 1, 1, 1, 1)
+        self.borderOffsetGridLayout.addWidget(self.XOffsetSpin, 1, 1, 1, 1)
 
-        self.XOffsetLabel = QLabel(self.widget_2)
+        self.XOffsetLabel = QLabel("X-Offset:", self.borderOffsetWidget)
 
-        self.gridLayout_3.addWidget(self.XOffsetLabel, 0, 1, 1, 1)
+        self.borderOffsetGridLayout.addWidget(self.XOffsetLabel, 0, 1, 1, 1)
 
-        self.YOffsetLabel = QLabel(self.widget_2)
+        self.YOffsetLabel = QLabel("Y-Offset:", self.borderOffsetWidget)
 
-        self.gridLayout_3.addWidget(self.YOffsetLabel, 2, 1, 1, 1)
+        self.borderOffsetGridLayout.addWidget(self.YOffsetLabel, 2, 1, 1, 1)
 
-        self.YOffsetSpin = QSpinBox(self.widget_2)
+        self.YOffsetSpin = QSpinBox(self.borderOffsetWidget)
 
-        self.gridLayout_3.addWidget(self.YOffsetSpin, 3, 1, 1, 1)
+        self.borderOffsetGridLayout.addWidget(self.YOffsetSpin, 3, 1, 1, 1)
 
-        self.widget_3 = QWidget(self.widget_2)
+        self.borderWidget = QWidget(self.borderOffsetWidget)
 
-        self.gridLayout_4 = QGridLayout(self.widget_3)
+        self.borderGridLayout = QGridLayout(self.borderWidget)
 
-        self.pushButton_2 = QPushButton(self.widget_3)
+        self.topButton = QPushButton("-", self.borderWidget)
 
-        self.gridLayout_4.addWidget(self.pushButton_2, 0, 1, 1, 1)
+        self.borderGridLayout.addWidget(self.topButton, 0, 1, 1, 1)
 
-        self.pushButton_3 = QPushButton(self.widget_3)
+        self.topRightButton = QPushButton("-|", self.borderWidget)
 
-        self.gridLayout_4.addWidget(self.pushButton_3, 0, 2, 1, 1)
+        self.borderGridLayout.addWidget(self.topRightButton, 0, 2, 1, 1)
 
-        self.pushButton_6 = QPushButton(self.widget_3)
+        self.leftButton = QPushButton("|", self.borderWidget)
 
-        self.gridLayout_4.addWidget(self.pushButton_6, 1, 2, 1, 1)
+        self.borderGridLayout.addWidget(self.leftButton, 1, 2, 1, 1)
 
-        self.pushButton_4 = QPushButton(self.widget_3)
+        self.rightButton = QPushButton("|", self.borderWidget)
 
-        self.gridLayout_4.addWidget(self.pushButton_4, 1, 0, 1, 1)
+        self.borderGridLayout.addWidget(self.rightButton, 1, 0, 1, 1)
 
-        self.pushButton_5 = QPushButton(self.widget_3)
+        self.centerButton = QPushButton("O", self.borderWidget)
 
-        self.gridLayout_4.addWidget(self.pushButton_5, 1, 1, 1, 1)
+        self.borderGridLayout.addWidget(self.centerButton, 1, 1, 1, 1)
 
-        self.pushButton = QPushButton(self.widget_3)
+        self.topLeftButton = QPushButton("|-", self.borderWidget)
 
-        self.gridLayout_4.addWidget(self.pushButton, 0, 0, 1, 1)
+        self.borderGridLayout.addWidget(self.topLeftButton, 0, 0, 1, 1)
 
-        self.pushButton_7 = QPushButton(self.widget_3)
+        self.bottomLeftButton = QPushButton("|_", self.borderWidget)
 
-        self.gridLayout_4.addWidget(self.pushButton_7, 2, 0, 1, 1)
+        self.borderGridLayout.addWidget(self.bottomLeftButton, 2, 0, 1, 1)
 
-        self.pushButton_8 = QPushButton(self.widget_3)
+        self.bottomButton = QPushButton("_", self.borderWidget)
 
-        self.gridLayout_4.addWidget(self.pushButton_8, 2, 1, 1, 1)
+        self.borderGridLayout.addWidget(self.bottomButton, 2, 1, 1, 1)
 
-        self.pushButton_9 = QPushButton(self.widget_3)
+        self.bottomRightButton = QPushButton("_|", self.borderWidget)
 
-        self.gridLayout_4.addWidget(self.pushButton_9, 2, 2, 1, 1)
+        self.borderGridLayout.addWidget(self.bottomRightButton, 2, 2, 1, 1)
 
-        self.gridLayout_3.addWidget(self.widget_3, 0, 0, 4, 1)
+        self.borderOffsetGridLayout.addWidget(self.borderWidget, 0, 0, 4, 1)
 
-        self.splitter.addWidget(self.widget_2)
+        self.splitter.addWidget(self.borderOffsetWidget)
 
-        self.gridLayout_5.addWidget(self.splitter, 0, 0, 1, 1)
+        self.frameGridLayout.addWidget(self.splitter, 0, 0, 1, 1)
 
-        self.gridLayout.addWidget(self.frame, 0, 0, 1, 1)
+        self.positionGridLayout.addWidget(self.frame, 0, 0, 1, 1)
