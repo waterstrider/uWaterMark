@@ -4,7 +4,7 @@ from PySide.QtGui import *
 
 from uWatermarksList.uWatermarksList import UWatermarksList
 from uImagesList.uImagesList import UImagesList
-from uGenerate
+from uGenerate.uGenerate import UGenerate
 from uDestination.uDestination import UDestination
 from uImageViewer.uImageViewer import UImageViewer
 
@@ -18,9 +18,9 @@ class UCentralWidget(QWidget):
         self.uDestination = UDestination(self)
         self.gridLayout.addWidget(self.uDestination, 1, 0, 1, 1)
 
-        self.widget_2 = QWidget(self)
+        self.uGenerate = UGenerate(self)
 
-        self.gridLayout.addWidget(self.widget_2, 2, 0, 1, 1)
+        self.gridLayout.addWidget(self.uGenerate, 2, 0, 1, 1)
 
         self.tabWidget = QTabWidget(self)
         self.uImageViewer = UImageViewer()
