@@ -1,6 +1,7 @@
 __author__ = 'waterstrider.vin'
 
 from PySide.QtGui import *
+from uPushButton.uPushButtonWidget import UPushButtonWidget
 
 
 class UImageViewerWidget(QWidget):
@@ -8,22 +9,22 @@ class UImageViewerWidget(QWidget):
         QWidget.__init__(self, parent)
 
         self.gridLayout = QGridLayout(self)
+        self.showAllWatermarksBox = QCheckBox("Show all watermarks", self)
 
-        self.imageLabel = QLabel(self)
-        self.gridLayout.addWidget(self.imageLabel, 0, 0, 1, 5)
+        self.gridLayout.addWidget(self.showAllWatermarksBox, 1, 2, 1, 1)
 
-        self.rotateLeftButton = QPushButton("<", self)
-        self.gridLayout.addWidget(self.rotateLeftButton, 1, 0, 1, 1)
+        self.actualSizeButton = UPushButtonWidget(self, "Actual Size", "1:1")
 
-        self.rotateRightButton = QPushButton(">", self)
-        self.gridLayout.addWidget(self.rotateRightButton, 1, 1, 1, 1)
+        self.gridLayout.addWidget(self.actualSizeButton, 1, 1, 1, 1)
 
-        self.cropButton = QPushButton("crop", self)
-        self.gridLayout.addWidget(self.cropButton, 1, 2, 1, 1)
+        self.fitToWindowButton = UPushButtonWidget(self, "Fit to Window", "<>")
 
-        self.effectsButton = QPushButton("effect", self)
-        self.gridLayout.addWidget(self.effectsButton, 1, 3, 1, 1)
+        self.gridLayout.addWidget(self.fitToWindowButton, 1, 0, 1, 1)
 
-        self.optionsButton = QPushButton("option", self)
-        self.gridLayout.addWidget(self.optionsButton, 1, 4, 1, 1)
+        self.scrollArea = QScrollArea(self)
+        self.scrollArea.setWidgetResizable(True)
+        self.imageLabel = QLabel()
 
+        self.scrollArea.setWidget(self.imageLabel)
+
+        self.gridLayout.addWidget(self.scrollArea, 0, 0, 1, 3)

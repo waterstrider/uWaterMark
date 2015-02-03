@@ -4,11 +4,11 @@ from sys import argv
 
 from PySide.QtGui import QApplication
 
-from uPushButton.uPushButtonWidget import UPushButtonWidget
+from uImagePreview.uImagePreviewWidget import UImagePreviewWidget
 
 
 if __name__ == "__main__":
     app = QApplication(argv)
-    uPushButton = UPushButtonWidget()
-    uPushButtonWidget.show()
+    uImageViewer = UImagePreviewWidget()
+    uImageViewer.show()
     app.exec_()

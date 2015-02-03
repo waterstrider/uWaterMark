@@ -1,3 +1,5 @@
+from uImageViewer import uImageViewerWidget
+
 __author__ = 'waterstrider.vin'
 
 from sys import argv
@@ -9,6 +11,6 @@ from uImageViewer.uImageViewerWidget import UImageViewerWidget
 
 if __name__ == "__main__":
     app = QApplication(argv)
-    uImageViewer = UImageViewerWidget()
-    uImageViewer.show()
+    uImageViewerWidget = UImageViewerWidget()
+    uImageViewerWidget.show()
     app.exec_()

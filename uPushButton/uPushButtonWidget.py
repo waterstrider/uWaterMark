@@ -3,7 +3,7 @@ __author__ = 'waterstrider.vin'
 from PySide.QtGui import *
 
 
-class UPushButton(QWidget):
+class UPushButtonWidget(QWidget):
     def __init__(self, parent=None, label=None, image=None):
         QWidget.__init__(self, parent)
         self.gridLayout = QGridLayout(self)
