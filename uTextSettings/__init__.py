@@ -4,7 +4,7 @@ from sys import argv
 
 from PySide.QtGui import QApplication
 
-from UTextSettings.UTextSettingsWidget import UTextSettingsWidget
+from uTextSettings.uTextSettingsWidget import UTextSettingsWidget
 
 
 if __name__ == "__main__":

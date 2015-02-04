@@ -71,9 +71,9 @@ class UPositionWidget(QWidget):
 
         self.borderGridLayout.addWidget(self.rightButton, 1, 0, 1, 1)
 
-        self.centerButton = QPushButton("O", self.borderWidget)
+        self.centreButton = QPushButton("O", self.borderWidget)
 
-        self.borderGridLayout.addWidget(self.centerButton, 1, 1, 1, 1)
+        self.borderGridLayout.addWidget(self.centreButton, 1, 1, 1, 1)
 
         self.topLeftButton = QPushButton("|-", self.borderWidget)
 
