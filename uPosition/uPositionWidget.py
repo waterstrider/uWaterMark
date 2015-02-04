@@ -10,18 +10,19 @@ class UPositionWidget(QGroupBox):
         self.positionGridLayout = QGridLayout(self)
 
         self.modeWidget = QWidget(self)
-
         self.modeGridLayout = QGridLayout(self.modeWidget)
-
         self.modeLabel = QLabel("Mode:", self.modeWidget)
-
         self.modeGridLayout.addWidget(self.modeLabel, 0, 0, 1, 1)
-
         self.modeCombo = QComboBox(self.modeWidget)
-
         self.modeGridLayout.addWidget(self.modeCombo, 0, 1, 1, 1)
-
         self.positionGridLayout.addWidget(self.modeWidget, 0, 0, 1, 1)
+
+        self.line = QFrame(self)
+        self.line.setFrameShape(QFrame.HLine)
+        self.line.setFrameShadow(QFrame.Sunken)
+
+        self.positionGridLayout.addWidget(self.line, 1, 0, 1, 2)
+
         self.borderOffsetWidget = QWidget(self)
 
         self.borderOffsetGridLayout = QGridLayout(self.borderOffsetWidget)
@@ -84,5 +85,5 @@ class UPositionWidget(QGroupBox):
 
         self.borderOffsetGridLayout.addWidget(self.borderWidget, 0, 0, 4, 1)
 
-        self.positionGridLayout.addWidget(self.borderOffsetWidget, 1, 0, 1, 1)
+        self.positionGridLayout.addWidget(self.borderOffsetWidget, 2, 0, 1, 1)
 
