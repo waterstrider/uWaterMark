@@ -3,37 +3,29 @@ __author__ = 'waterstrider.vin'
 from PySide.QtGui import *
 
 
-class URotateWidget(QWidget):
+class URotateWidget(QGroupBox):
     def __init__(self, parent=None):
-        QWidget.__init__(self, parent)
-        self.rotateGridLayout = QGridLayout(self)
+        QGroupBox.__init__(self, parent)
+        self.setTitle("Rotation")
+        self.angleGridLayout = QGridLayout(self)
 
-        self.frame = QFrame(self)
-        self.frame.setFrameShape(QFrame.StyledPanel)
-        self.frame.setFrameShadow(QFrame.Raised)
-        self.frameGridLayout = QGridLayout(self.frame)
-
-        self.angleWidget = QWidget(self.frame)
-
-        self.angleGridLayout = QGridLayout(self.angleWidget)
-
-        self.angle0Button = QPushButton("0°", self.angleWidget)
+        self.angle0Button = QPushButton("0°", self)
 
         self.angleGridLayout.addWidget(self.angle0Button, 0, 1, 1, 1)
 
-        self.angle90Button = QPushButton("90°", self.angleWidget)
+        self.angle90Button = QPushButton("90°", self)
 
         self.angleGridLayout.addWidget(self.angle90Button, 1, 1, 1, 1)
 
-        self.angle180Button = QPushButton("180°", self.angleWidget)
+        self.angle180Button = QPushButton("180°", self)
 
         self.angleGridLayout.addWidget(self.angle180Button, 2, 1, 1, 1)
 
-        self.angle270Button = QPushButton("270°", self.angleWidget)
+        self.angle270Button = QPushButton("270°", self)
 
         self.angleGridLayout.addWidget(self.angle270Button, 3, 1, 1, 1)
 
-        self.angleDialWidget = QWidget(self.angleWidget)
+        self.angleDialWidget = QWidget(self)
 
         self.angleDialGridLayout = QGridLayout(self.angleDialWidget)
 
@@ -50,7 +42,3 @@ class URotateWidget(QWidget):
         self.angleDialGridLayout.addWidget(self.angleDial, 0, 0, 1, 2)
 
         self.angleGridLayout.addWidget(self.angleDialWidget, 0, 0, 4, 1)
-
-        self.frameGridLayout.addWidget(self.angleWidget, 0, 0, 1, 1)
-
-        self.rotateGridLayout.addWidget(self.frame, 0, 0, 1, 1)

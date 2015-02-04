@@ -1,24 +1,15 @@
 __author__ = 'waterstrider.vin'
 
 from PySide.QtGui import *
-from PySide.QtCore import Qt
 
 
-class UPositionWidget(QWidget):
+class UPositionWidget(QGroupBox):
     def __init__(self, parent=None):
-        QWidget.__init__(self, parent)
-
+        QGroupBox.__init__(self, parent)
+        self.setTitle("Position")
         self.positionGridLayout = QGridLayout(self)
-        self.frame = QFrame(self)
 
-        self.frame.setFrameShape(QFrame.StyledPanel)
-        self.frame.setFrameShadow(QFrame.Raised)
-        self.frameGridLayout = QGridLayout(self.frame)
-
-        self.splitter = QSplitter(self.frame)
-
-        self.splitter.setOrientation(Qt.Vertical)
-        self.modeWidget = QWidget(self.splitter)
+        self.modeWidget = QWidget(self)
 
         self.modeGridLayout = QGridLayout(self.modeWidget)
 
@@ -30,8 +21,8 @@ class UPositionWidget(QWidget):
 
         self.modeGridLayout.addWidget(self.modeCombo, 0, 1, 1, 1)
 
-        self.splitter.addWidget(self.modeWidget)
-        self.borderOffsetWidget = QWidget(self.splitter)
+        self.positionGridLayout.addWidget(self.modeWidget, 0, 0, 1, 1)
+        self.borderOffsetWidget = QWidget(self)
 
         self.borderOffsetGridLayout = QGridLayout(self.borderOffsetWidget)
 
@@ -93,8 +84,5 @@ class UPositionWidget(QWidget):
 
         self.borderOffsetGridLayout.addWidget(self.borderWidget, 0, 0, 4, 1)
 
-        self.splitter.addWidget(self.borderOffsetWidget)
+        self.positionGridLayout.addWidget(self.borderOffsetWidget, 1, 0, 1, 1)
 
-        self.frameGridLayout.addWidget(self.splitter, 0, 0, 1, 1)
-
-        self.positionGridLayout.addWidget(self.frame, 0, 0, 1, 1)

@@ -15,7 +15,7 @@ class UDestinationWidget(QWidget):
         self.gridLayout.addWidget(self.toFolderButton, 1, 1, 1, 1)
 
         self.destinationLabel = QLabel("Destination:", self)
-        self.gridLayout.addWidget(self.destinationLabel, 0, 0, 2, 1)
+        self.gridLayout.addWidget(self.destinationLabel, 0, 0, 1, 1)
 
         self.browseButton = QPushButton("...", self)
         self.gridLayout.addWidget(self.browseButton, 1, 3, 1, 1)
