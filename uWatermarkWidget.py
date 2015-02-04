@@ -25,3 +25,4 @@ class UWatermarkWidget(QMainWindow):
 
         self.menubar.addAction(self.menuFile.menuAction())
         self.menuFile.addAction(self.actionExit)
+

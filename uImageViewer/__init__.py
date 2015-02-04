@@ -6,7 +6,6 @@ from PySide.QtGui import QApplication
 
 from uImageViewer.uImageViewerWidget import UImageViewerWidget
 
-
 if __name__ == "__main__":
     app = QApplication(argv)
     uImageViewerWidget = UImageViewerWidget()
