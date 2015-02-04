@@ -1,7 +1,7 @@
 __author__ = 'waterstrider.vin'
 
 from PySide.QtGui import *
-
+from PySide.QtCore import Qt
 
 class UPresetsListWidget(QWidget):
     def __init__(self, parent=None):
@@ -17,22 +17,22 @@ class UPresetsListWidget(QWidget):
 
         self.presetsListGridLayout = QGridLayout(self.widget)
 
-        self.addButton = QPushButton(self.widget)
+        self.addButton = QPushButton("+", self.widget)
 
         self.presetsListGridLayout.addWidget(self.addButton, 1, 1, 1, 1)
 
-        self.applyButton = QPushButton(self.widget)
+        self.applyButton = QPushButton("Apply", self.widget)
 
         self.presetsListGridLayout.addWidget(self.applyButton, 1, 0, 1, 1)
 
-        self.removeButton = QPushButton(self.widget)
+        self.removeButton = QPushButton("-", self.widget)
 
         self.presetsListGridLayout.addWidget(self.removeButton, 1, 2, 1, 1)
 
         self.scrollArea = QScrollArea(self.widget)
         self.scrollArea.setWidgetResizable(True)
         self.uPresetsList = QListWidget()
-
+        self.scrollArea.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
         self.scrollArea.setWidget(self.uPresetsList)
 
         self.presetsListGridLayout.addWidget(self.scrollArea, 0, 0, 1, 3)
