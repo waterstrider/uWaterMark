@@ -4,11 +4,11 @@ from sys import argv
 
 from PySide.QtGui import QApplication
 
-from uTextSettings.uTextSettingsWidget import UTextSettingsWidget
+from uOpacity.uOpacityWidget import UOpacityWidget
 
 
 if __name__ == "__main__":
     app = QApplication(argv)
-    uTextSettingsWidget = UTextSettingsWidget()
-    uTextSettingsWidget.show()
+    uOpacityWidget = UOpacityWidget()
+    uOpacityWidget.show()
     app.exec_()

@@ -6,6 +6,7 @@ from uImageViewer.uImageViewerWidget import UImageViewerWidget
 from uPosition.uPositionWidget import UPositionWidget
 from uRotate.uRotateWidget import URotateWidget
 from uPresetsList.uPresetsListWidget import UPresetsListWidget
+from uTextSettings.uTextSettingsWidget import UTextSettingsWidget
 
 
 class UTextWatermarkWidget(QWidget):
@@ -23,9 +24,9 @@ class UTextWatermarkWidget(QWidget):
 
         self.tabWidget = QTabWidget(self.previewFontWidget)
 
-        self.tab_3 = QWidget()
+        self.uTextSettingsWidget = UTextSettingsWidget()
 
-        self.tabWidget.addTab(self.tab_3, "Text settings")
+        self.tabWidget.addTab(self.uTextSettingsWidget, "Text settings")
         self.tab_4 = QWidget()
 
         self.tabWidget.addTab(self.tab_4, "Text effects")

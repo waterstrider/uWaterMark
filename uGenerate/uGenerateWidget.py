@@ -7,7 +7,7 @@ class UGenerateWidget(QWidget):
     def __init__(self, parent=None):
         QWidget.__init__(self, parent)
         self.gridLayout = QGridLayout(self)
-        self.generateButton = QPushButton(self)
+        self.generateButton = QPushButton("Generate!", self)
 
         self.gridLayout.addWidget(self.generateButton, 0, 0, 2, 1)
 
