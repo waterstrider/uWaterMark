@@ -25,10 +25,10 @@ class UWatermarksListWidget(QWidget):
 
         self.gridLayout.addWidget(self.removeButton, 2, 1, 1, 1)
 
-        self.loadButton = QPushButton(self)
+        self.loadButton = QPushButton("Load List", self)
 
         self.gridLayout.addWidget(self.loadButton, 0, 0, 1, 1)
 
-        self.saveButton = QPushButton(self)
+        self.saveButton = QPushButton("Save List", self)
 
         self.gridLayout.addWidget(self.saveButton, 0, 1, 1, 1)
