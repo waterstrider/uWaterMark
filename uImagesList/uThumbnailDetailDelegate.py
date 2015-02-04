@@ -10,6 +10,4 @@ class UThumbnailDetailDelegate(QItemDelegate):
         QItemDelegate.__init__(self, parent, *args)
 
     def paint(self, painter, option, index):
-        value = index.data(Qt.DisplayRole)
-        value.render(painter, painter.deviceTransform().map(option.rect.topLeft()))
-        print(painter.deviceTransform().map(option.rect.topLeft()))
+        index.data(Qt.DisplayRole).render(painter, painter.deviceTransform().map(option.rect.topLeft()))
