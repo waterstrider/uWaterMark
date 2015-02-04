@@ -11,12 +11,12 @@ class UWatermarkWidget(QMainWindow):
 
         self.setWindowTitle("UWatermark")
 
-        self.actionExit = QAction(self)
+        self.actionExit = QAction("Exit", self)
         self.centralwidget = UCentralWidget(self)
         self.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(self)
 
-        self.menuFile = QMenu(self.menubar)
+        self.menuFile = QMenu("File", self.menubar)
 
         self.setMenuBar(self.menubar)
         self.statusbar = QStatusBar(self)
