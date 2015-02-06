@@ -7,7 +7,7 @@ from uPosition.uPositionWidget import UPositionWidget
 from uRotate.uRotateWidget import URotateWidget
 from uPresetsList.uPresetsListWidget import UPresetsListWidget
 from uTextSettings.uTextSettingsWidget import UTextSettingsWidget
-
+from uTextEffects.uTextEffectsWidget import UTextEffectsWidget
 
 class UTextWatermarkWidget(QWidget):
     def __init__(self, parent=None):
@@ -27,9 +27,9 @@ class UTextWatermarkWidget(QWidget):
         self.uTextSettingsWidget = UTextSettingsWidget()
 
         self.tabWidget.addTab(self.uTextSettingsWidget, "Text settings")
-        self.tab_4 = QWidget()
+        self.uTextEffectsWidget = UTextEffectsWidget()
 
-        self.tabWidget.addTab(self.tab_4, "Text effects")
+        self.tabWidget.addTab(self.uTextEffectsWidget, "Text effects")
         self.tab_5 = QWidget()
 
         self.tabWidget.addTab(self.tab_5, "Background")
