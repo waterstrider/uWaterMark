@@ -10,6 +10,7 @@ from uTextSettings.uTextSettingsWidget import UTextSettingsWidget
 from uTextEffects.uTextEffectsWidget import UTextEffectsWidget
 from uBackground.uBackgroundWidget import UBackgroundWidget
 
+
 class UTextWatermarkWidget(QWidget):
     def __init__(self, parent=None):
         QWidget.__init__(self, parent)
